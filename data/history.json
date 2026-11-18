@@ -5059,7 +5059,139 @@
       "updated_at": null,
       "date_raw": null,
       "first_discovered_at": "2026-11-18T01:12:21Z"
+    },
+    "b0ac456b8c756943a78377d0c660937d778c7fb736c6b04407c7fe12468a93fb": {
+      "item_id": "b0ac456b8c756943a78377d0c660937d778c7fb736c6b04407c7fe12468a93fb",
+      "source_id": "azure_updates",
+      "vendor": "Azure",
+      "title": "Manage cookies",
+      "url": "https://azure.microsoft.com/en-us/updates/",
+      "published_at": null,
+      "updated_at": null,
+      "date_raw": null,
+      "first_discovered_at": "2026-11-18T01:28:39Z"
+    },
+    "d1d4c0ea63de2e1c98104f7cda16646cff73e41b812700353727ed76dbefa981": {
+      "item_id": "d1d4c0ea63de2e1c98104f7cda16646cff73e41b812700353727ed76dbefa981",
+      "source_id": "meta_marketing_api",
+      "vendor": "Meta Marketing API",
+      "title": "Graph API",
+      "url": "https://developers.facebook.com/docs/graph-api",
+      "published_at": null,
+      "updated_at": null,
+      "date_raw": null,
+      "first_discovered_at": "2026-11-18T01:28:39Z"
+    },
+    "d5653615d8113550a178a91a5b6b6e0e0dc4fbea1981ba48676127b72768e759": {
+      "item_id": "d5653615d8113550a178a91a5b6b6e0e0dc4fbea1981ba48676127b72768e759",
+      "source_id": "meta_marketing_api",
+      "vendor": "Meta Marketing API",
+      "title": "Overview",
+      "url": "https://developers.facebook.com/docs/graph-api/overview",
+      "published_at": null,
+      "updated_at": null,
+      "date_raw": null,
+      "first_discovered_at": "2026-11-18T01:28:39Z"
+    },
+    "a5b0201b16808cf2dbce1a90a71994e5e5ed747f24699ec2d2b8a49384d6f681": {
+      "item_id": "a5b0201b16808cf2dbce1a90a71994e5e5ed747f24699ec2d2b8a49384d6f681",
+      "source_id": "meta_marketing_api",
+      "vendor": "Meta Marketing API",
+      "title": "Get Started",
+      "url": "https://developers.facebook.com/docs/graph-api/get-started",
+      "published_at": null,
+      "updated_at": null,
+      "date_raw": null,
+      "first_discovered_at": "2026-11-18T01:28:39Z"
+    },
+    "c451a629d4af6b14e4ffd7003647fdb59cdc9d366b53a8a81fb4270974cd3b11": {
+      "item_id": "c451a629d4af6b14e4ffd7003647fdb59cdc9d366b53a8a81fb4270974cd3b11",
+      "source_id": "meta_marketing_api",
+      "vendor": "Meta Marketing API",
+      "title": "Batch Requests",
+      "url": "https://developers.facebook.com/docs/graph-api/batch-requests",
+      "published_at": null,
+      "updated_at": null,
+      "date_raw": null,
+      "first_discovered_at": "2026-11-18T01:28:39Z"
+    },
+    "bbe17d3be089e93e454c71f9769d345752a89d8d619b41acde42369d07f509bd": {
+      "item_id": "bbe17d3be089e93e454c71f9769d345752a89d8d619b41acde42369d07f509bd",
+      "source_id": "meta_marketing_api",
+      "vendor": "Meta Marketing API",
+      "title": "Debug Requests",
+      "url": "https://developers.facebook.com/docs/graph-api/guides/debugging",
+      "published_at": null,
+      "updated_at": null,
+      "date_raw": null,
+      "first_discovered_at": "2026-11-18T01:28:39Z"
+    },
+    "ec987b9b68cdc5229489712fd4f9c539fe70e62dbc16fe3a359c0441fbdc51da": {
+      "item_id": "ec987b9b68cdc5229489712fd4f9c539fe70e62dbc16fe3a359c0441fbdc51da",
+      "source_id": "meta_marketing_api",
+      "vendor": "Meta Marketing API",
+      "title": "Handle Errors",
+      "url": "https://developers.facebook.com/docs/graph-api/guides/error-handling",
+      "published_at": null,
+      "updated_at": null,
+      "date_raw": null,
+      "first_discovered_at": "2026-11-18T01:28:39Z"
+    },
+    "b13071569c367eabb413cd0d9e8ba36126f66366bb13f8e628f9b3e1c7d0d661": {
+      "item_id": "b13071569c367eabb413cd0d9e8ba36126f66366bb13f8e628f9b3e1c7d0d661",
+      "source_id": "meta_marketing_api",
+      "vendor": "Meta Marketing API",
+      "title": "Changelog",
+      "url": "https://developers.facebook.com/docs/graph-api/changelog",
+      "published_at": null,
+      "updated_at": null,
+      "date_raw": null,
+      "first_discovered_at": "2026-11-18T01:28:39Z"
+    },
+    "6d66c310e50ec56ace9be0968cc89e87bdc39c5b738ea2afd71be2d02dda2271": {
+      "item_id": "6d66c310e50ec56ace9be0968cc89e87bdc39c5b738ea2afd71be2d02dda2271",
+      "source_id": "meta_marketing_api",
+      "vendor": "Meta Marketing API",
+      "title": "Platform Versioning",
+      "url": "https://developers.facebook.com/docs/apps/versions",
+      "published_at": null,
+      "updated_at": null,
+      "date_raw": null,
+      "first_discovered_at": "2026-11-18T01:28:39Z"
+    },
+    "46d2b22f4fa9f33deb59b86e8d8a64350141a1f6f2fd8bf3b7b4a2fa4f83f337": {
+      "item_id": "46d2b22f4fa9f33deb59b86e8d8a64350141a1f6f2fd8bf3b7b4a2fa4f83f337",
+      "source_id": "meta_marketing_api",
+      "vendor": "Meta Marketing API",
+      "title": "Out-Of-Cycle Changes",
+      "url": "https://developers.facebook.com/docs/graph-api/changelog/out-of-cycle-changes",
+      "published_at": null,
+      "updated_at": null,
+      "date_raw": null,
+      "first_discovered_at": "2026-11-18T01:28:39Z"
+    },
+    "70a96e1840d7b4aa3e5c75bb78a90ae26a379f8e2e50c53582546b5153893df0": {
+      "item_id": "70a96e1840d7b4aa3e5c75bb78a90ae26a379f8e2e50c53582546b5153893df0",
+      "source_id": "meta_marketing_api",
+      "vendor": "Meta Marketing API",
+      "title": "version auto-upgrade",
+      "url": "https://developers.facebook.com/docs/marketing-api/versions#version-auto-upgrade",
+      "published_at": null,
+      "updated_at": null,
+      "date_raw": null,
+      "first_discovered_at": "2026-11-18T01:28:39Z"
+    },
+    "828f5f3d8158b524b75204e23cbf67305953ea07b49f4620bbadf346d8688e87": {
+      "item_id": "828f5f3d8158b524b75204e23cbf67305953ea07b49f4620bbadf346d8688e87",
+      "source_id": "adobe_experience_cloud",
+      "vendor": "Adobe Experience Cloud",
+      "title": "Release Notes",
+      "url": "https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current",
+      "published_at": null,
+      "updated_at": null,
+      "date_raw": null,
+      "first_discovered_at": "2026-11-18T01:28:39Z"
     }
   },
-  "last_run_at": "2026-11-18T01:12:27Z"
+  "last_run_at": "2026-11-18T01:28:39Z"
 }
