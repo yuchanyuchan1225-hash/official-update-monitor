@@ -1,0 +1,30 @@
+name: Collect official updates
+
+on:
+  schedule:
+    # GitHub Actions cron is UTC: 21:50 UTC = 06:50 JST, before JST 07:00.
+    - cron: "50 21 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate source configuration
+        run: python collector.py --dry-run
+      - name: Collect official updates
+        run: python collector.py
+      - name: Commit audit and history
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/audit.csv data/audit.json data/history.json
+          git diff --cached --quiet || git commit -m "chore: collect official updates"
+          git push
