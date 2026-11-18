@@ -104,11 +104,33 @@ def parse_dotdigital_release_notes(source, body, final_url):
                         "updated_at": None, "date_raw": date_raw, "_quality": "dated_update"})
     return results[:50]
 
+def strip_tags(fragment):
+    return clean(re.sub(r"<[^>]+>", " ", fragment))
+
+def parse_meta_marketing_versions(source, body, final_url):
+    """Extract the official Marketing API version table, not the Graph API table."""
+    marker = re.search(r"<h2[^>]*>\s*Marketing API\s*</h2>(.*?</table>)", body, re.I | re.S)
+    if not marker: return []
+    results = []
+    for row in re.findall(r"<tr[^>]*>(.*?)</tr>", marker.group(1), re.I | re.S):
+        cells = re.findall(r"<td[^>]*>(.*?)</td>", row, re.I | re.S)
+        if len(cells) < 2: continue
+        link = re.search(r'href=["\']([^"\']+)', cells[0], re.I)
+        version, date_raw = strip_tags(cells[0]), strip_tags(cells[1])
+        published_at = parse_date(date_raw)
+        if not (version.startswith("v") and published_at and link): continue
+        results.append({"title": f"Marketing API {version}", "url": urljoin(final_url, link.group(1)),
+                        "published_at": published_at, "updated_at": None, "date_raw": date_raw,
+                        "_quality": "dated_update"})
+    return results
+
 def parse_html(source, body, final_url):
     # These handlers intentionally do less than a generic page scraper.  A source
     # whose public HTML is client-rendered is audited as accessible but unparsed.
     if source["id"] == "dotdigital_personalization":
         return parse_dotdigital_release_notes(source, body, final_url)
+    if source["id"] == "meta_marketing_api":
+        return parse_meta_marketing_versions(source, body, final_url)
     if source["id"] == "adobe_experience_cloud":
         return parse_jsonld_page_metadata(source, body, final_url)
     return []

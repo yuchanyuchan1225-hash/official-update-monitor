@@ -24,7 +24,7 @@
       "vendor": "Meta Marketing API",
       "name": "Graph / Marketing API versions",
       "kind": "html",
-      "url": "https://developers.facebook.com/docs/graph-api/changelog/versions/",
+      "url": "https://developers.facebook.com/docs/graph-api/changelog/versions/?locale=en_US",
       "official_domain": "developers.facebook.com",
       "verification": "official changelog index; not a claim that an unauthenticated scrape will work"
     },
