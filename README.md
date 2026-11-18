@@ -40,7 +40,7 @@ python collector.py
 - `updated_at`：来源给出的更新时间；没有就为 `null`。RSS 的单一日期会同时记录为两者，原始文本保留在 `date_raw`。
 - `first_discovered_at`：本程序第一次看到该条目的 UTC 时间，绝不冒充发布日期。
 
-HTML 页面目前以链接发现为最小策略。审计会标记为 `accessible_candidates`，而非采集成功：它只表示页面可访问且发现候选链接。它会保存没有日期的候选项，但不会猜测日期；这些结果适合作为下一阶段为每个页面增加专用解析器的证据基础。
+HTML 来源已按页面特性分流：Dotdigital 只采集标题中带明确日期的 Release Notes；Adobe 只记录官方页面声明的元数据，状态为 `accessible_metadata`，不算产品更新。Azure、Meta、Salesforce、Braze 的未登录 HTML 若不能可靠提取带日期条目，会标记 `accessible_no_items`，不会保存导航链接或猜测日期。下一阶段应优先寻找它们的公开结构化 API 或可订阅源。
 
 ## 自动运行
 

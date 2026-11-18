@@ -71,11 +71,47 @@ def parse_feed(source, body):
         if title and link: results.append({"title": title, "url": link, "published_at": parse_date(date), "updated_at": parse_date(date), "date_raw": date})
     return results
 
-def parse_html(source, body, final_url):
+def parse_jsonld_page_metadata(source, body, final_url):
+    """Return only the source page's own declared metadata, never its nav links."""
+    blocks = re.findall(r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', body, re.I | re.S)
+    items = []
+    for block in blocks:
+        try: values = json.loads(block)
+        except json.JSONDecodeError: continue
+        if isinstance(values, dict): values = values.get("@graph", [values])
+        if not isinstance(values, list): continue
+        for value in values:
+            if not isinstance(value, dict): continue
+            title = clean(value.get("headline") or value.get("name"))
+            if title:
+                date = value.get("dateModified") or value.get("datePublished")
+                items.append({"title": title, "url": value.get("url") or final_url,
+                              "published_at": parse_date(value.get("datePublished")),
+                              "updated_at": parse_date(value.get("dateModified")),
+                              "date_raw": date, "_quality": "page_metadata"})
+    return items[:1]
+
+def parse_dotdigital_release_notes(source, body, final_url):
+    """Dotdigital exposes dated release-note titles on its official help page."""
     parser = LinkParser(); parser.feed(body)
-    # HTML pages often omit machine-readable per-item dates. Keep them, but never invent dates.
-    return [{"title": title, "url": urljoin(final_url, href), "published_at": None, "updated_at": None, "date_raw": None}
-            for href, title in parser.links if len(title) >= 8][:200]
+    date_pattern = re.compile(r"\b(?:\d{1,2}\s+)?(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+20\d{2}\b", re.I)
+    results = []
+    for href, title in parser.links:
+        match = date_pattern.search(title)
+        if not match or "release note" not in title.lower(): continue
+        date_raw = match.group(0)
+        results.append({"title": title, "url": urljoin(final_url, href), "published_at": parse_date(date_raw),
+                        "updated_at": None, "date_raw": date_raw, "_quality": "dated_update"})
+    return results[:50]
+
+def parse_html(source, body, final_url):
+    # These handlers intentionally do less than a generic page scraper.  A source
+    # whose public HTML is client-rendered is audited as accessible but unparsed.
+    if source["id"] == "dotdigital_personalization":
+        return parse_dotdigital_release_notes(source, body, final_url)
+    if source["id"] == "adobe_experience_cloud":
+        return parse_jsonld_page_metadata(source, body, final_url)
+    return []
 
 def load_json(path, fallback):
     if not path.exists(): return fallback
@@ -117,7 +153,13 @@ def run(config_path, data_dir, dry_run):
             # A generic HTML link scan only yields candidates.  It is deliberately
             # not reported as a successful dated release-note extraction.
             if source["kind"] == "html":
-                record["status"] = "accessible_candidates" if parsed else "accessible_no_items"
+                qualities = {item.get("_quality") for item in parsed}
+                if "dated_update" in qualities:
+                    record["status"] = "ok"
+                elif "page_metadata" in qualities:
+                    record["status"] = "accessible_metadata"
+                else:
+                    record["status"] = "accessible_no_items"
             else:
                 record["status"] = "ok" if parsed else "ok_empty"
             for item in parsed:
@@ -133,7 +175,7 @@ def run(config_path, data_dir, dry_run):
     history["last_run_at"] = discovered_at; write_json(history_file, history)
     write_json(audit_json, {"run_at": discovered_at, "sources": audit, "new_items": new_items})
     append_csv(audit_csv, audit, ["run_at", "source_id", "vendor", "source_url", "kind", "status", "http_status", "final_url", "content_type", "items_parsed", "new_items", "error"])
-    print(json.dumps({"run_at": discovered_at, "sources": len(audit), "verified_feeds": sum(x["status"] == "ok" for x in audit), "html_candidates": sum(x["status"] == "accessible_candidates" for x in audit), "new_items": len(new_items)}, ensure_ascii=False))
+    print(json.dumps({"run_at": discovered_at, "sources": len(audit), "verified_sources": sum(x["status"] == "ok" for x in audit), "metadata_only": sum(x["status"] == "accessible_metadata" for x in audit), "new_items": len(new_items)}, ensure_ascii=False))
     return 0
 
 if __name__ == "__main__":
