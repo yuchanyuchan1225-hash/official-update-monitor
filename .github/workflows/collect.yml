@@ -2,8 +2,9 @@ name: Collect official updates
 
 on:
   schedule:
-    # GitHub Actions cron is UTC: 21:50 UTC = 06:50 JST, before JST 07:00.
-    - cron: "50 21 * * *"
+    # Explicit timezone avoids UTC conversion ambiguity.  Run before JST 07:00.
+    - cron: "45 6 * * *"
+      timezone: "Asia/Tokyo"
   workflow_dispatch:
 
 permissions:

@@ -44,6 +44,6 @@ HTML 来源已按页面特性分流：Dotdigital 只采集标题中带明确日�
 
 ## 自动运行
 
-`.github/workflows/collect.yml` 在 **06:50 JST**（21:50 UTC）每天触发，满足“JST 07:00 前”。GitHub 定时任务可能有调度延迟；若“严格不晚于 07:00”是硬性要求，应换用有 SLA 的调度器，而不是把 GitHub cron 当作实时系统。
+`.github/workflows/collect.yml` 在 **06:45 JST** 每天触发，使用 GitHub 的 `Asia/Tokyo` 时区配置，目标是在 07:00 前完成启动。GitHub 定时任务可能有调度延迟；若“严格不晚于 07:00”是硬性要求，应换用有 SLA 的调度器，而不是把 GitHub cron 当作实时系统。
 
 工作流会提交 `data/` 下的审计和历史。仓库需要允许 GitHub Actions 具备 **Read and write permissions**；否则采集可以运行，但提交会失败并留在工作流日志中。
