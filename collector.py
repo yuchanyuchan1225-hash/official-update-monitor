@@ -188,66 +188,139 @@ def valid_domain(url, expected):
     host = (urlparse(url).hostname or "").lower()
     return host == expected or host.endswith("." + expected)
 
+def date_as_utc(value):
+    if not value:
+        return None
+    try:
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+        return parsed.replace(tzinfo=UTC) if parsed.tzinfo is None else parsed.astimezone(UTC)
+    except (ValueError, TypeError, AttributeError):
+        return None
+
+
+def news_event(item):
+    """Return the verifiable publication/update event; never infer edits from discovery time."""
+    published = date_as_utc(item.get("published_at"))
+    updated = date_as_utc(item.get("updated_at"))
+    if updated and published and updated > published:
+        return "updated", updated
+    if published:
+        return "published", published
+    # An update timestamp without a publication timestamp is still an official dated event.
+    if updated:
+        return "updated", updated
+    return None, None
+
+
 def run(config_path, data_dir, dry_run):
-    discovered_at = now_iso(); config = load_json(config_path, {})
+    discovered_at = now_iso()
+    config = load_json(config_path, {})
     sources = config.get("sources", [])
-    if not sources: raise RuntimeError("sources.json contains no sources")
+    if not sources:
+        raise RuntimeError("sources.json contains no sources")
     if dry_run:
-        for s in sources:
-            if not valid_domain(s["url"], s["official_domain"]): raise RuntimeError(f"invalid official_domain for {s['id']}")
-            if s["kind"] not in {"rss", "html"}: raise RuntimeError(f"unsupported kind for {s['id']}")
-        print(f"Config valid: {len(sources)} sources. No network request made."); return 0
+        for source in sources:
+            if not valid_domain(source["url"], source["official_domain"]):
+                raise RuntimeError(f"invalid official_domain for {source['id']}")
+            if source["kind"] not in {"rss", "html"}:
+                raise RuntimeError(f"unsupported kind for {source['id']}")
+        print(f"Config valid: {len(sources)} sources. No network request made.")
+        return 0
+
     data_dir.mkdir(parents=True, exist_ok=True)
-    history_file = data_dir / "history.json"; audit_json = data_dir / "audit.json"; audit_csv = data_dir / "audit.csv"
-    history = load_json(history_file, {"items": {}}); history_items = history.setdefault("items", {})
+    history_file = data_dir / "history.json"
+    audit_json = data_dir / "audit.json"
+    audit_csv = data_dir / "audit.csv"
+    history = load_json(history_file, {"items": {}})
+    history_items = history.setdefault("items", {})
+    # Persistent event-level ledger: a previously seen item may have a new dated update.
+    # The first run after upgrading can report already-stored items that are still recent.
+    reported_events = history.setdefault("reported_events", {})
     audit, new_items, recent_items = [], [], []
-    cutoff = datetime.fromisoformat(discovered_at.replace("Z", "+00:00")) - timedelta(hours=24)
-    def is_recent(item):
-        date_value = item.get("updated_at") or item.get("published_at")
-        if not date_value: return False
-        try:
-            dt = datetime.fromisoformat(date_value.replace("Z", "+00:00"))
-            return cutoff <= dt <= datetime.fromisoformat(discovered_at.replace("Z", "+00:00"))
-        except (ValueError, TypeError): return False
+    run_time = date_as_utc(discovered_at)
+    cutoff = run_time - timedelta(hours=24)
+
     for source in sources:
-        record = {"run_at": discovered_at, "source_id": source["id"], "vendor": source["vendor"], "source_url": source["url"], "kind": source["kind"], "status": "failed", "http_status": None, "final_url": None, "content_type": None, "items_parsed": 0, "new_items": 0, "recent_new_items": 0, "error": None}
+        record = {
+            "run_at": discovered_at, "source_id": source["id"], "vendor": source["vendor"],
+            "source_url": source["url"], "kind": source["kind"], "status": "failed",
+            "http_status": None, "final_url": None, "content_type": None,
+            "items_parsed": 0, "new_items": 0, "recent_new_items": 0, "error": None,
+        }
         try:
             final_url, status, content_type, body = fetch(source["url"])
             record.update(http_status=status, final_url=final_url, content_type=content_type)
             parsed = parse_feed(source, body) if source["kind"] == "rss" else parse_html(source, body, final_url)
             record["items_parsed"] = len(parsed)
-            # A generic HTML link scan only yields candidates.  It is deliberately
-            # not reported as a successful dated release-note extraction.
             if source["kind"] == "html":
                 qualities = {item.get("_quality") for item in parsed}
-                if "dated_update" in qualities:
-                    record["status"] = "ok"
-                elif "page_metadata" in qualities:
-                    record["status"] = "accessible_metadata"
-                else:
-                    record["status"] = "accessible_no_items"
+                record["status"] = ("ok" if "dated_update" in qualities else
+                                    "accessible_metadata" if "page_metadata" in qualities else
+                                    "accessible_no_items")
             else:
                 record["status"] = "ok" if parsed else "ok_empty"
+
             for item in parsed:
                 key = item_id(source["id"], item["url"], item["title"])
                 if key not in history_items:
-                    entry = {"item_id": key, "source_id": source["id"], "vendor": source["vendor"], "title": item["title"], "url": item["url"], "published_at": item["published_at"], "updated_at": item["updated_at"], "date_raw": item["date_raw"], "first_discovered_at": discovered_at}
+                    entry = {
+                        "item_id": key, "source_id": source["id"], "vendor": source["vendor"],
+                        "title": item["title"], "url": item["url"],
+                        "published_at": item.get("published_at"),
+                        "updated_at": item.get("updated_at"),
+                        "date_raw": item.get("date_raw"),
+                        "first_discovered_at": discovered_at,
+                    }
                     history_items[key] = entry
                     new_items.append(entry)
                     record["new_items"] += 1
-                    if is_recent(entry) and item.get("_quality") != "page_metadata":
-                        recent_items.append(entry)
-                        record["recent_new_items"] += 1
+                else:
+                    entry = history_items[key]
+                    # Refresh source metadata without overwriting a valid date with null.
+                    for field in ("published_at", "updated_at", "date_raw"):
+                        if item.get(field):
+                            entry[field] = item[field]
+
+                if item.get("_quality") == "page_metadata":
+                    continue
+                event_type, event_time = news_event(entry)
+                if event_time is None or not (cutoff <= event_time <= run_time):
+                    continue
+                event_stamp = event_time.isoformat().replace("+00:00", "Z")
+                event_key = hashlib.sha256(f"{key}|{event_type}|{event_stamp}".encode()).hexdigest()
+                if event_key in reported_events:
+                    continue
+                event = dict(entry)
+                event.update(event_type=event_type, event_at=event_stamp)
+                recent_items.append(event)
+                reported_events[event_key] = discovered_at
+                record["recent_new_items"] += 1
         except (HTTPError, URLError, TimeoutError, ET.ParseError, ValueError) as exc:
             record["error"] = f"{type(exc).__name__}: {exc}"
-        except Exception as exc:  # preserve unexpected failures in audit rather than hiding them
+        except Exception as exc:
             record["error"] = f"unexpected {type(exc).__name__}: {exc}"
         audit.append(record)
-    history["last_run_at"] = discovered_at; write_json(history_file, history)
-    write_json(audit_json, {"run_at": discovered_at, "sources": audit, "new_items": new_items, "recent_new_items": recent_items, "recent_window_hours": 24})
-    append_csv(audit_csv, audit, ["run_at", "source_id", "vendor", "source_url", "kind", "status", "http_status", "final_url", "content_type", "items_parsed", "new_items", "error"])
-    write_json(data_dir / "latest_recent.json", {"run_at": discovered_at, "window_hours": 24, "items": recent_items})
-    print(json.dumps({"run_at": discovered_at, "sources": len(audit), "verified_sources": sum(x["status"] == "ok" for x in audit), "metadata_only": sum(x["status"] == "accessible_metadata" for x in audit), "new_items": len(new_items), "recent_new_items": len(recent_items)}, ensure_ascii=False))
+
+    history["last_run_at"] = discovered_at
+    write_json(history_file, history)
+    write_json(audit_json, {
+        "run_at": discovered_at, "sources": audit, "new_items": new_items,
+        "recent_new_items": recent_items, "recent_window_hours": 24,
+    })
+    append_csv(audit_csv, audit, [
+        "run_at", "source_id", "vendor", "source_url", "kind", "status",
+        "http_status", "final_url", "content_type", "items_parsed", "new_items",
+        "recent_new_items", "error",
+    ])
+    write_json(data_dir / "latest_recent.json", {
+        "run_at": discovered_at, "window_hours": 24, "items": recent_items,
+    })
+    print(json.dumps({
+        "run_at": discovered_at, "sources": len(audit),
+        "verified_sources": sum(x["status"] == "ok" for x in audit),
+        "metadata_only": sum(x["status"] == "accessible_metadata" for x in audit),
+        "new_items": len(new_items), "recent_new_items": len(recent_items),
+    }, ensure_ascii=False))
     return 0
 
 if __name__ == "__main__":
