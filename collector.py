@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import argparse, csv, hashlib, json, re, sys
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
 from html import unescape
 from html.parser import HTMLParser
@@ -47,7 +47,9 @@ def parse_date(value):
     try: return parsedate_to_datetime(value).astimezone(UTC).isoformat().replace("+00:00", "Z")
     except (TypeError, ValueError): pass
     for fmt in ("%Y-%m-%dT%H:%M:%SZ", "%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%d", "%B %d, %Y", "%d %B %Y"):
-        try: return datetime.strptime(value, fmt).replace(tzinfo=UTC).isoformat().replace("+00:00", "Z")
+        try:
+            parsed = datetime.strptime(value, fmt)
+            return (parsed.replace(tzinfo=UTC) if parsed.tzinfo is None else parsed.astimezone(UTC)).isoformat().replace("+00:00", "Z")
         except ValueError: continue
     return None
 
@@ -124,6 +126,40 @@ def parse_meta_marketing_versions(source, body, final_url):
                         "_quality": "dated_update"})
     return results
 
+def parse_dated_release_links(source, body, final_url):
+    """Conservative fallback: official-domain links with a date AND release/update wording.
+
+    It cannot extract client-rendered links. A link without a reliable date is rejected.
+    """
+    parser = LinkParser()
+    parser.feed(body)
+    patterns = [
+        re.compile(r"\b(20\d{2}-[01]\d-[0-3]\d)\b"),
+        re.compile(r"\b((?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+20\d{2})\b", re.I),
+        re.compile(r"\b(\d{1,2}\s+(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+20\d{2})\b", re.I),
+    ]
+    results = []
+    seen = set()
+    for href, title in parser.links:
+        url = urljoin(final_url, href)
+        if not valid_domain(url, source["official_domain"]):
+            continue
+        if not re.search(r"release|update|changelog|what.s new|new feature", title, re.I):
+            continue
+        for pattern in patterns:
+            match = pattern.search(title)
+            if not match:
+                continue
+            raw = match.group(1)
+            published = parse_date(raw)
+            if published and url not in seen:
+                seen.add(url)
+                results.append({"title": title, "url": url, "published_at": published,
+                                "updated_at": None, "date_raw": raw, "_quality": "dated_update"})
+            break
+    return results[:100]
+
+
 def parse_html(source, body, final_url):
     # These handlers intentionally do less than a generic page scraper.  A source
     # whose public HTML is client-rendered is audited as accessible but unparsed.
@@ -133,7 +169,7 @@ def parse_html(source, body, final_url):
         return parse_meta_marketing_versions(source, body, final_url)
     if source["id"] == "adobe_experience_cloud":
         return parse_jsonld_page_metadata(source, body, final_url)
-    return []
+    return parse_dated_release_links(source, body, final_url)
 
 def load_json(path, fallback):
     if not path.exists(): return fallback
@@ -164,9 +200,17 @@ def run(config_path, data_dir, dry_run):
     data_dir.mkdir(parents=True, exist_ok=True)
     history_file = data_dir / "history.json"; audit_json = data_dir / "audit.json"; audit_csv = data_dir / "audit.csv"
     history = load_json(history_file, {"items": {}}); history_items = history.setdefault("items", {})
-    audit, new_items = [], []
+    audit, new_items, recent_items = [], [], []
+    cutoff = datetime.fromisoformat(discovered_at.replace("Z", "+00:00")) - timedelta(hours=24)
+    def is_recent(item):
+        date_value = item.get("updated_at") or item.get("published_at")
+        if not date_value: return False
+        try:
+            dt = datetime.fromisoformat(date_value.replace("Z", "+00:00"))
+            return cutoff <= dt <= datetime.fromisoformat(discovered_at.replace("Z", "+00:00"))
+        except (ValueError, TypeError): return False
     for source in sources:
-        record = {"run_at": discovered_at, "source_id": source["id"], "vendor": source["vendor"], "source_url": source["url"], "kind": source["kind"], "status": "failed", "http_status": None, "final_url": None, "content_type": None, "items_parsed": 0, "new_items": 0, "error": None}
+        record = {"run_at": discovered_at, "source_id": source["id"], "vendor": source["vendor"], "source_url": source["url"], "kind": source["kind"], "status": "failed", "http_status": None, "final_url": None, "content_type": None, "items_parsed": 0, "new_items": 0, "recent_new_items": 0, "error": None}
         try:
             final_url, status, content_type, body = fetch(source["url"])
             record.update(http_status=status, final_url=final_url, content_type=content_type)
@@ -188,16 +232,22 @@ def run(config_path, data_dir, dry_run):
                 key = item_id(source["id"], item["url"], item["title"])
                 if key not in history_items:
                     entry = {"item_id": key, "source_id": source["id"], "vendor": source["vendor"], "title": item["title"], "url": item["url"], "published_at": item["published_at"], "updated_at": item["updated_at"], "date_raw": item["date_raw"], "first_discovered_at": discovered_at}
-                    history_items[key] = entry; new_items.append(entry); record["new_items"] += 1
+                    history_items[key] = entry
+                    new_items.append(entry)
+                    record["new_items"] += 1
+                    if is_recent(entry) and item.get("_quality") != "page_metadata":
+                        recent_items.append(entry)
+                        record["recent_new_items"] += 1
         except (HTTPError, URLError, TimeoutError, ET.ParseError, ValueError) as exc:
             record["error"] = f"{type(exc).__name__}: {exc}"
         except Exception as exc:  # preserve unexpected failures in audit rather than hiding them
             record["error"] = f"unexpected {type(exc).__name__}: {exc}"
         audit.append(record)
     history["last_run_at"] = discovered_at; write_json(history_file, history)
-    write_json(audit_json, {"run_at": discovered_at, "sources": audit, "new_items": new_items})
+    write_json(audit_json, {"run_at": discovered_at, "sources": audit, "new_items": new_items, "recent_new_items": recent_items, "recent_window_hours": 24})
     append_csv(audit_csv, audit, ["run_at", "source_id", "vendor", "source_url", "kind", "status", "http_status", "final_url", "content_type", "items_parsed", "new_items", "error"])
-    print(json.dumps({"run_at": discovered_at, "sources": len(audit), "verified_sources": sum(x["status"] == "ok" for x in audit), "metadata_only": sum(x["status"] == "accessible_metadata" for x in audit), "new_items": len(new_items)}, ensure_ascii=False))
+    write_json(data_dir / "latest_recent.json", {"run_at": discovered_at, "window_hours": 24, "items": recent_items})
+    print(json.dumps({"run_at": discovered_at, "sources": len(audit), "verified_sources": sum(x["status"] == "ok" for x in audit), "metadata_only": sum(x["status"] == "accessible_metadata" for x in audit), "new_items": len(new_items), "recent_new_items": len(recent_items)}, ensure_ascii=False))
     return 0
 
 if __name__ == "__main__":

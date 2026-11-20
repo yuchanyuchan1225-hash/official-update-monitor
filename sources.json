@@ -1,77 +1,13 @@
 {
   "schema_version": 1,
   "sources": [
-    {
-      "id": "aws_whats_new",
-      "vendor": "AWS",
-      "name": "AWS What's New RSS",
-      "kind": "rss",
-      "url": "https://aws.amazon.com/new/feed/",
-      "official_domain": "aws.amazon.com",
-      "verification": "official RSS URL; must be probed on every run"
-    },
-    {
-      "id": "azure_updates",
-      "vendor": "Azure",
-      "name": "Azure Updates",
-      "kind": "html",
-      "url": "https://azure.microsoft.com/en-us/updates/",
-      "official_domain": "azure.microsoft.com",
-      "verification": "official updates page; browser rendering may be required"
-    },
-    {
-      "id": "meta_marketing_api",
-      "vendor": "Meta Marketing API",
-      "name": "Graph / Marketing API versions",
-      "kind": "html",
-      "url": "https://developers.facebook.com/docs/graph-api/changelog/versions/?locale=en_US",
-      "official_domain": "developers.facebook.com",
-      "verification": "official changelog index; not a claim that an unauthenticated scrape will work"
-    },
-    {
-      "id": "salesforce_release_notes",
-      "vendor": "Salesforce",
-      "name": "Salesforce Release Note Changes",
-      "kind": "html",
-      "url": "https://help.salesforce.com/s/articleView?id=release-notes.rn_change_log.htm&language=en_US&type=5",
-      "official_domain": "help.salesforce.com",
-      "verification": "official release-notes page; content structure can change"
-    },
-    {
-      "id": "hubspot_product_blog",
-      "vendor": "HubSpot",
-      "name": "HubSpot Product Blog RSS",
-      "kind": "rss",
-      "url": "https://product.hubspot.com/blog/rss.xml",
-      "official_domain": "product.hubspot.com",
-      "verification": "official RSS URL; product updates shown in-app are account-specific"
-    },
-    {
-      "id": "adobe_experience_cloud",
-      "vendor": "Adobe Experience Cloud",
-      "name": "Adobe Experience Cloud Central Release Notes",
-      "kind": "html",
-      "url": "https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current",
-      "official_domain": "experienceleague.adobe.com",
-      "verification": "official central release-notes page"
-    },
-    {
-      "id": "braze_releases",
-      "vendor": "Braze",
-      "name": "Braze What's New",
-      "kind": "html",
-      "url": "https://www.braze.com/docs/releases",
-      "official_domain": "www.braze.com",
-      "verification": "official release-notes page; no RSS is assumed"
-    },
-    {
-      "id": "dotdigital_personalization",
-      "vendor": "Dotdigital",
-      "name": "Dotdigital Personalization release note",
-      "kind": "html",
-      "url": "https://personalization.help.dotdigital.com/en/articles/18226397-4-november-2026-personalization-release-notes",
-      "official_domain": "personalization.help.dotdigital.com",
-      "verification": "official dated release-note URL found; this is not yet a verified rolling index"
-    }
+    {"id":"aws_whats_new","vendor":"AWS","name":"AWS What's New RSS","kind":"rss","url":"https://aws.amazon.com/new/feed/","official_domain":"aws.amazon.com"},
+    {"id":"azure_updates","vendor":"Azure","name":"Azure Updates","kind":"html","url":"https://azure.microsoft.com/en-us/updates/","official_domain":"azure.microsoft.com"},
+    {"id":"meta_marketing_api","vendor":"Meta Marketing API","name":"Graph / Marketing API versions","kind":"html","url":"https://developers.facebook.com/docs/graph-api/changelog/versions/?locale=en_US","official_domain":"developers.facebook.com"},
+    {"id":"salesforce_release_notes","vendor":"Salesforce","name":"Salesforce Release Note Changes","kind":"html","url":"https://help.salesforce.com/s/articleView?id=release-notes.rn_change_log.htm&language=en_US&type=5","official_domain":"help.salesforce.com"},
+    {"id":"hubspot_product_blog","vendor":"HubSpot","name":"HubSpot Product Blog RSS","kind":"rss","url":"https://product.hubspot.com/blog/rss.xml","official_domain":"product.hubspot.com"},
+    {"id":"adobe_experience_cloud","vendor":"Adobe Experience Cloud","name":"Adobe Experience Cloud Central Release Notes","kind":"html","url":"https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current","official_domain":"experienceleague.adobe.com"},
+    {"id":"braze_releases","vendor":"Braze","name":"Braze What's New","kind":"html","url":"https://www.braze.com/docs/releases","official_domain":"www.braze.com"},
+    {"id":"dotdigital_personalization","vendor":"Dotdigital","name":"Dotdigital Personalization release note","kind":"html","url":"https://personalization.help.dotdigital.com/en/articles/18226397-4-november-2026-personalization-release-notes","official_domain":"personalization.help.dotdigital.com"}
   ]
 }
