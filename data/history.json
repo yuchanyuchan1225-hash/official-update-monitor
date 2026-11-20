@@ -2672,7 +2672,18 @@
       "updated_at": null,
       "date_raw": "18 November 2026",
       "first_discovered_at": "2026-11-20T01:54:22Z"
+    },
+    "a32753240b4760ebce88f3fa2c86f625d5d8844e846e9f47520a1b5821fa6cf5": {
+      "item_id": "a32753240b4760ebce88f3fa2c86f625d5d8844e846e9f47520a1b5821fa6cf5",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Second-generation AWS Outposts racks now supported in the AWS European Sovereign Cloud (Germany) Region",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-outposts-thf-european-sovereign/",
+      "published_at": "2026-11-19T08:00:00Z",
+      "updated_at": "2026-11-19T08:00:00Z",
+      "date_raw": "Thu, 19 Nov 2026 08:00:00 GMT",
+      "first_discovered_at": "2026-11-20T02:34:50Z"
     }
   },
-  "last_run_at": "2026-11-20T01:54:22Z"
+  "last_run_at": "2026-11-20T02:34:50Z"
 }
