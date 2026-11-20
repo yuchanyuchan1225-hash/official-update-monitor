@@ -1,0 +1,10 @@
+[
+ {"id":"aws","name":"AWS What's New","url":"https://aws.amazon.com/new/feed/","kind":"rss"},
+ {"id":"azure","name":"Azure Updates","url":"https://azure.microsoft.com/en-us/updates/","kind":"html"},
+ {"id":"meta_marketing","name":"Meta Marketing API Changelog","url":"https://developers.facebook.com/docs/marketing-api/changelog/","kind":"html"},
+ {"id":"salesforce","name":"Salesforce Release Notes","url":"https://help.salesforce.com/s/articleView?id=release-notes.rn_change_log.htm&language=en_US&type=5","kind":"html"},
+ {"id":"hubspot","name":"HubSpot Product Updates","url":"https://community.hubspot.com/c/resources/releases-and-updates/134","kind":"html"},
+ {"id":"adobe","name":"Adobe Experience Cloud Release Notes","url":"https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current","kind":"html"},
+ {"id":"braze","name":"Braze Release Notes","url":"https://www.braze.com/docs/releases/","kind":"html"},
+ {"id":"dotdigital","name":"Dotdigital Release Notes","url":"https://support.dotdigital.com/hc/en-gb/sections/360002486939-Release-notes","kind":"html"}
+]
