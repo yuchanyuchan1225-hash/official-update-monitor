@@ -1,8 +1,8 @@
 {
-  "run_at": "2026-11-22T01:34:32Z",
+  "run_at": "2026-11-23T01:58:13Z",
   "sources": [
     {
-      "run_at": "2026-11-22T01:34:32Z",
+      "run_at": "2026-11-23T01:58:13Z",
       "source_id": "aws_whats_new",
       "vendor": "AWS",
       "source_url": "https://aws.amazon.com/new/feed/",
@@ -12,12 +12,12 @@
       "final_url": "https://aws.amazon.com/about-aws/whats-new/recent/feed/",
       "content_type": "application/rss+xml",
       "items_parsed": 100,
-      "new_items": 5,
-      "recent_new_items": 1,
+      "new_items": 0,
+      "recent_new_items": 0,
       "error": null
     },
     {
-      "run_at": "2026-11-22T01:34:32Z",
+      "run_at": "2026-11-23T01:58:13Z",
       "source_id": "azure_updates",
       "vendor": "Azure",
       "source_url": "https://azure.microsoft.com/en-us/updates/",
@@ -32,7 +32,7 @@
       "error": null
     },
     {
-      "run_at": "2026-11-22T01:34:32Z",
+      "run_at": "2026-11-23T01:58:13Z",
       "source_id": "meta_marketing_api",
       "vendor": "Meta Marketing API",
       "source_url": "https://developers.facebook.com/docs/graph-api/changelog/versions/?locale=en_US",
@@ -47,7 +47,7 @@
       "error": null
     },
     {
-      "run_at": "2026-11-22T01:34:32Z",
+      "run_at": "2026-11-23T01:58:13Z",
       "source_id": "salesforce_release_notes",
       "vendor": "Salesforce",
       "source_url": "https://help.salesforce.com/s/articleView?id=release-notes.rn_change_log.htm&language=en_US&type=5",
@@ -62,7 +62,7 @@
       "error": null
     },
     {
-      "run_at": "2026-11-22T01:34:32Z",
+      "run_at": "2026-11-23T01:58:13Z",
       "source_id": "hubspot_product_blog",
       "vendor": "HubSpot",
       "source_url": "https://product.hubspot.com/blog/rss.xml",
@@ -77,7 +77,7 @@
       "error": null
     },
     {
-      "run_at": "2026-11-22T01:34:32Z",
+      "run_at": "2026-11-23T01:58:13Z",
       "source_id": "adobe_experience_cloud",
       "vendor": "Adobe Experience Cloud",
       "source_url": "https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current",
@@ -92,7 +92,7 @@
       "error": null
     },
     {
-      "run_at": "2026-11-22T01:34:32Z",
+      "run_at": "2026-11-23T01:58:13Z",
       "source_id": "braze_releases",
       "vendor": "Braze",
       "source_url": "https://www.braze.com/docs/releases",
@@ -107,7 +107,7 @@
       "error": null
     },
     {
-      "run_at": "2026-11-22T01:34:32Z",
+      "run_at": "2026-11-23T01:58:13Z",
       "source_id": "dotdigital_personalization",
       "vendor": "Dotdigital",
       "source_url": "https://personalization.help.dotdigital.com/en/articles/18226397-4-november-2026-personalization-release-notes",
@@ -122,77 +122,7 @@
       "error": null
     }
   ],
-  "new_items": [
-    {
-      "item_id": "a69deb28c417074da44fab921952ce872104127311b84c833aec9047d29f4c58",
-      "source_id": "aws_whats_new",
-      "vendor": "AWS",
-      "title": "AWS Quick now supports plugins to bundle agents, skills, connectors and flows",
-      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-quick-plugins-bundle-agents-skills-connectors-flows/",
-      "published_at": "2026-11-21T02:58:00Z",
-      "updated_at": "2026-11-21T02:58:00Z",
-      "date_raw": "Sat, 21 Nov 2026 02:58:00 GMT",
-      "first_discovered_at": "2026-11-22T01:34:32Z"
-    },
-    {
-      "item_id": "d9032f7d4f8810d5417b7530c4ce8998815f7ad8b859374327aa43bfd32970f0",
-      "source_id": "aws_whats_new",
-      "vendor": "AWS",
-      "title": "AWS Quick launches a new web experience with updated browser extension and Microsoft 365 add-ins",
-      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-quick-launches-new-web-experience-updated-browser-extension-microsoft-365-add-ins/",
-      "published_at": "2026-11-21T00:27:00Z",
-      "updated_at": "2026-11-21T00:27:00Z",
-      "date_raw": "Sat, 21 Nov 2026 00:27:00 GMT",
-      "first_discovered_at": "2026-11-22T01:34:32Z"
-    },
-    {
-      "item_id": "9b9b52c80d3ccaf6859e28080504d76f196e8bea9c85ab3186f89b8831d02836",
-      "source_id": "aws_whats_new",
-      "vendor": "AWS",
-      "title": "Build more capable automations through chat with Flows in AWS Quick",
-      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-quick-flows-automations-chat/",
-      "published_at": "2026-11-20T23:59:00Z",
-      "updated_at": "2026-11-20T23:59:00Z",
-      "date_raw": "Fri, 20 Nov 2026 23:59:00 GMT",
-      "first_discovered_at": "2026-11-22T01:34:32Z"
-    },
-    {
-      "item_id": "472be66d6e36c112b54b9ac1f024190dcbf33671e294df564c79bc1ed730d597",
-      "source_id": "aws_whats_new",
-      "vendor": "AWS",
-      "title": "AWS Lambda now publishes Event Function state change events to Amazon EventBridge",
-      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-lambda-function-state-events/",
-      "published_at": "2026-11-20T22:40:00Z",
-      "updated_at": "2026-11-20T22:40:00Z",
-      "date_raw": "Fri, 20 Nov 2026 22:40:00 GMT",
-      "first_discovered_at": "2026-11-22T01:34:32Z"
-    },
-    {
-      "item_id": "bee30a1d0c2335293131d15a74970781cccb33350a4badfb7361cd0b7e0b58ec",
-      "source_id": "aws_whats_new",
-      "vendor": "AWS",
-      "title": "AWS Quick now supports Japanese, German, Vietnamese, and Chinese",
-      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-quick-japanese-german-chinese-vietnamese/",
-      "published_at": "2026-11-20T22:11:00Z",
-      "updated_at": "2026-11-20T22:11:00Z",
-      "date_raw": "Fri, 20 Nov 2026 22:11:00 GMT",
-      "first_discovered_at": "2026-11-22T01:34:32Z"
-    }
-  ],
-  "recent_new_items": [
-    {
-      "item_id": "a69deb28c417074da44fab921952ce872104127311b84c833aec9047d29f4c58",
-      "source_id": "aws_whats_new",
-      "vendor": "AWS",
-      "title": "AWS Quick now supports plugins to bundle agents, skills, connectors and flows",
-      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-quick-plugins-bundle-agents-skills-connectors-flows/",
-      "published_at": "2026-11-21T02:58:00Z",
-      "updated_at": "2026-11-21T02:58:00Z",
-      "date_raw": "Sat, 21 Nov 2026 02:58:00 GMT",
-      "first_discovered_at": "2026-11-22T01:34:32Z",
-      "event_type": "published",
-      "event_at": "2026-11-21T02:58:00Z"
-    }
-  ],
+  "new_items": [],
+  "recent_new_items": [],
   "recent_window_hours": 24
 }
