@@ -1,0 +1,71 @@
+{
+  "run_at": "2026-11-25T00:30:22Z",
+  "window_hours": 24,
+  "items": [
+    {
+      "item_id": "3cfcf7e815ec97bc6f6ddba71814536c2b9ff636946b12550b6f584ec7d22adf",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon Bedrock adds bedrock-runtime endpoint support for OpenAI Daybreak Red in AWS GovCloud (US)",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/gpt-daybreak-red-runtime-govcloud/",
+      "published_at": "2026-11-24T21:27:00Z",
+      "updated_at": "2026-11-24T21:27:00Z",
+      "date_raw": "Tue, 24 Nov 2026 21:27:00 GMT",
+      "first_discovered_at": "2026-11-25T00:30:22Z",
+      "event_type": "published",
+      "event_at": "2026-11-24T21:27:00Z"
+    },
+    {
+      "item_id": "b204cf70c88abd76c9c4e602a7a94ed6adad9d50c142728283b914603090df31",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon OpenSearch Serverless is now available in the Africa (Cape Town) Region",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-opensearch-serverless-available-cape-town-region/",
+      "published_at": "2026-11-24T20:22:00Z",
+      "updated_at": "2026-11-24T20:22:00Z",
+      "date_raw": "Tue, 24 Nov 2026 20:22:00 GMT",
+      "first_discovered_at": "2026-11-25T00:30:22Z",
+      "event_type": "published",
+      "event_at": "2026-11-24T20:22:00Z"
+    },
+    {
+      "item_id": "8131d48ece3b1018b712da175823df929a27e371779b0608712650aaf40ca142",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "AWS CloudFormation makes resource coverage comprehensive with 206 new types",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/cloudformation-coverage-expansion/",
+      "published_at": "2026-11-24T20:00:00Z",
+      "updated_at": "2026-11-24T20:00:00Z",
+      "date_raw": "Tue, 24 Nov 2026 20:00:00 GMT",
+      "first_discovered_at": "2026-11-25T00:30:22Z",
+      "event_type": "published",
+      "event_at": "2026-11-24T20:00:00Z"
+    },
+    {
+      "item_id": "31663a19e106528b422ba083b8f37efb096a852983f1df8b42e0ca02a576cc11",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon Connect Customer dashboards now support grouping historical metrics by time interval",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-connect-time-interval/",
+      "published_at": "2026-11-24T17:00:00Z",
+      "updated_at": "2026-11-24T17:00:00Z",
+      "date_raw": "Tue, 24 Nov 2026 17:00:00 GMT",
+      "first_discovered_at": "2026-11-25T00:30:22Z",
+      "event_type": "published",
+      "event_at": "2026-11-24T17:00:00Z"
+    },
+    {
+      "item_id": "63d329c7ebd2656e43c23581dbb4fc17f10996627b3bbff93b5cf75c4e45d19e",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon RDS for SQL Server now supports up to 500 databases per instance",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/rds-sqlserver-supports-500-databases-per-instance",
+      "published_at": "2026-11-24T08:00:00Z",
+      "updated_at": "2026-11-24T08:00:00Z",
+      "date_raw": "Tue, 24 Nov 2026 08:00:00 GMT",
+      "first_discovered_at": "2026-11-25T00:30:22Z",
+      "event_type": "published",
+      "event_at": "2026-11-24T08:00:00Z"
+    }
+  ]
+}

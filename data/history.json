@@ -3948,9 +3948,185 @@
       "updated_at": "2026-11-20T08:00:00Z",
       "date_raw": "Fri, 20 Nov 2026 08:00:00 GMT",
       "first_discovered_at": "2026-11-24T05:31:01Z"
+    },
+    "3cfcf7e815ec97bc6f6ddba71814536c2b9ff636946b12550b6f584ec7d22adf": {
+      "item_id": "3cfcf7e815ec97bc6f6ddba71814536c2b9ff636946b12550b6f584ec7d22adf",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon Bedrock adds bedrock-runtime endpoint support for OpenAI Daybreak Red in AWS GovCloud (US)",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/gpt-daybreak-red-runtime-govcloud/",
+      "published_at": "2026-11-24T21:27:00Z",
+      "updated_at": "2026-11-24T21:27:00Z",
+      "date_raw": "Tue, 24 Nov 2026 21:27:00 GMT",
+      "first_discovered_at": "2026-11-25T00:30:22Z"
+    },
+    "b204cf70c88abd76c9c4e602a7a94ed6adad9d50c142728283b914603090df31": {
+      "item_id": "b204cf70c88abd76c9c4e602a7a94ed6adad9d50c142728283b914603090df31",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon OpenSearch Serverless is now available in the Africa (Cape Town) Region",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-opensearch-serverless-available-cape-town-region/",
+      "published_at": "2026-11-24T20:22:00Z",
+      "updated_at": "2026-11-24T20:22:00Z",
+      "date_raw": "Tue, 24 Nov 2026 20:22:00 GMT",
+      "first_discovered_at": "2026-11-25T00:30:22Z"
+    },
+    "8131d48ece3b1018b712da175823df929a27e371779b0608712650aaf40ca142": {
+      "item_id": "8131d48ece3b1018b712da175823df929a27e371779b0608712650aaf40ca142",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "AWS CloudFormation makes resource coverage comprehensive with 206 new types",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/cloudformation-coverage-expansion/",
+      "published_at": "2026-11-24T20:00:00Z",
+      "updated_at": "2026-11-24T20:00:00Z",
+      "date_raw": "Tue, 24 Nov 2026 20:00:00 GMT",
+      "first_discovered_at": "2026-11-25T00:30:22Z"
+    },
+    "31663a19e106528b422ba083b8f37efb096a852983f1df8b42e0ca02a576cc11": {
+      "item_id": "31663a19e106528b422ba083b8f37efb096a852983f1df8b42e0ca02a576cc11",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon Connect Customer dashboards now support grouping historical metrics by time interval",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-connect-time-interval/",
+      "published_at": "2026-11-24T17:00:00Z",
+      "updated_at": "2026-11-24T17:00:00Z",
+      "date_raw": "Tue, 24 Nov 2026 17:00:00 GMT",
+      "first_discovered_at": "2026-11-25T00:30:22Z"
+    },
+    "63d329c7ebd2656e43c23581dbb4fc17f10996627b3bbff93b5cf75c4e45d19e": {
+      "item_id": "63d329c7ebd2656e43c23581dbb4fc17f10996627b3bbff93b5cf75c4e45d19e",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon RDS for SQL Server now supports up to 500 databases per instance",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/rds-sqlserver-supports-500-databases-per-instance",
+      "published_at": "2026-11-24T08:00:00Z",
+      "updated_at": "2026-11-24T08:00:00Z",
+      "date_raw": "Tue, 24 Nov 2026 08:00:00 GMT",
+      "first_discovered_at": "2026-11-25T00:30:22Z"
+    },
+    "fb48927b88008b6ad61391f9e18dddffe8b14100ed704b06aa0ac1b7b5d0469c": {
+      "item_id": "fb48927b88008b6ad61391f9e18dddffe8b14100ed704b06aa0ac1b7b5d0469c",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon API Gateway announces API Portal",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-api-gateway-announces-api-portal/",
+      "published_at": "2026-11-23T20:00:00Z",
+      "updated_at": "2026-11-23T20:00:00Z",
+      "date_raw": "Mon, 23 Nov 2026 20:00:00 GMT",
+      "first_discovered_at": "2026-11-25T00:30:22Z"
+    },
+    "5ad51cc9ca31ec468e039992b9be74f3ee75108ce589a87af22329dd8359d4f8": {
+      "item_id": "5ad51cc9ca31ec468e039992b9be74f3ee75108ce589a87af22329dd8359d4f8",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon OpenSearch Service now supports OpenSearch version 3.9",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-opensearch-opensearch-3-9",
+      "published_at": "2026-11-23T19:30:00Z",
+      "updated_at": "2026-11-23T19:30:00Z",
+      "date_raw": "Mon, 23 Nov 2026 19:30:00 GMT",
+      "first_discovered_at": "2026-11-25T00:30:22Z"
+    },
+    "d036502dc47d77b897c737c947579ce3061c8d2e67e6baa68b57ad2c8fe82f17": {
+      "item_id": "d036502dc47d77b897c737c947579ce3061c8d2e67e6baa68b57ad2c8fe82f17",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "AWS Quick adds identity-aware access via 3LO for Snowflake and Databricks structured data sources",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-quick-snowflake-databricks-3lo-end-user-permissions/",
+      "published_at": "2026-11-23T17:00:00Z",
+      "updated_at": "2026-11-23T17:00:00Z",
+      "date_raw": "Mon, 23 Nov 2026 17:00:00 GMT",
+      "first_discovered_at": "2026-11-25T00:30:22Z"
+    },
+    "4322c1e4ec127e4192067eadd791385a637eb71d3711626535b8d0c6b23f4ce6": {
+      "item_id": "4322c1e4ec127e4192067eadd791385a637eb71d3711626535b8d0c6b23f4ce6",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "RDS PostgreSQL now supports PostgreSQL 19.0 in the Amazon RDS Database Preview Environment",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/postgresql-19-amazon-rds-database-preview-environment/",
+      "published_at": "2026-11-23T17:00:00Z",
+      "updated_at": "2026-11-23T17:00:00Z",
+      "date_raw": "Mon, 23 Nov 2026 17:00:00 GMT",
+      "first_discovered_at": "2026-11-25T00:30:22Z"
+    },
+    "001250f3bf6f184cca35a5bbe666ea0e5fa3aa27af236296cdca8ece9b854627": {
+      "item_id": "001250f3bf6f184cca35a5bbe666ea0e5fa3aa27af236296cdca8ece9b854627",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "AWS Quick brings AI-ready capabilities to your existing datasets",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-quick-ai-ready-existing-datasets/",
+      "published_at": "2026-11-23T17:00:00Z",
+      "updated_at": "2026-11-23T17:00:00Z",
+      "date_raw": "Mon, 23 Nov 2026 17:00:00 GMT",
+      "first_discovered_at": "2026-11-25T00:30:22Z"
+    },
+    "6fa5d760a09ad3e98377f7045d1d3f64f4faf6e9ea771cb3ad74e0ee5942aac8": {
+      "item_id": "6fa5d760a09ad3e98377f7045d1d3f64f4faf6e9ea771cb3ad74e0ee5942aac8",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "AWS Device Farm launches Device Connect for local access to remote Android devices",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/device-farm-device-connect/",
+      "published_at": "2026-11-23T08:00:00Z",
+      "updated_at": "2026-11-23T08:00:00Z",
+      "date_raw": "Mon, 23 Nov 2026 08:00:00 GMT",
+      "first_discovered_at": "2026-11-25T00:30:22Z"
+    },
+    "10a53c2ffc24e8c00ff672684f17bae4a6f7190a141b17e7e06a9089fc299d3a": {
+      "item_id": "10a53c2ffc24e8c00ff672684f17bae4a6f7190a141b17e7e06a9089fc299d3a",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon SageMaker AI now supports viewing capacity reservations",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/sagemaker-capacity-reservations/",
+      "published_at": "2026-11-23T08:00:00Z",
+      "updated_at": "2026-11-23T08:00:00Z",
+      "date_raw": "Mon, 23 Nov 2026 08:00:00 GMT",
+      "first_discovered_at": "2026-11-25T00:30:22Z"
+    },
+    "d7cf8329aa636fff57b01c160038168ffeef4acf0bd26995bec64cc62659e84d": {
+      "item_id": "d7cf8329aa636fff57b01c160038168ffeef4acf0bd26995bec64cc62659e84d",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "AWS WAF announces automated discovery and protection for API endpoints",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/api-security-with-waf/",
+      "published_at": "2026-11-23T08:00:00Z",
+      "updated_at": "2026-11-23T08:00:00Z",
+      "date_raw": "Mon, 23 Nov 2026 08:00:00 GMT",
+      "first_discovered_at": "2026-11-25T00:30:22Z"
+    },
+    "187e33c3c7d10269b47fbe72b0619f69ee08a7c703f9d9cb8de40fec811d747a": {
+      "item_id": "187e33c3c7d10269b47fbe72b0619f69ee08a7c703f9d9cb8de40fec811d747a",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "AWS DevOps Agent adds Access Profiles and AWS Organizations",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/devops-agent-access-profiles-orgs/",
+      "published_at": "2026-11-23T08:00:00Z",
+      "updated_at": "2026-11-23T08:00:00Z",
+      "date_raw": "Mon, 23 Nov 2026 08:00:00 GMT",
+      "first_discovered_at": "2026-11-25T00:30:22Z"
+    },
+    "089596d1dae94f52f6188dfe8103ea000de2d78a68357ed1abfd8652b357b4b2": {
+      "item_id": "089596d1dae94f52f6188dfe8103ea000de2d78a68357ed1abfd8652b357b4b2",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "AWS Parallel Computing Service now supports Split Cost Allocation Data",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/pcs-supports-split-cost-data/",
+      "published_at": "2026-11-23T08:00:00Z",
+      "updated_at": "2026-11-23T08:00:00Z",
+      "date_raw": "Mon, 23 Nov 2026 08:00:00 GMT",
+      "first_discovered_at": "2026-11-25T00:30:22Z"
+    },
+    "c04ef025d49e6f79b340b2cb1e690449c4c90562fb3a37844bf758a4ade98d84": {
+      "item_id": "c04ef025d49e6f79b340b2cb1e690449c4c90562fb3a37844bf758a4ade98d84",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "AWS Network Firewall introduces automated Internet firewall (Preview)",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/network-firewall-automated-internet/",
+      "published_at": "2026-11-20T22:38:00Z",
+      "updated_at": "2026-11-20T22:38:00Z",
+      "date_raw": "Fri, 20 Nov 2026 22:38:00 GMT",
+      "first_discovered_at": "2026-11-25T00:30:22Z"
     }
   },
-  "last_run_at": "2026-11-24T05:31:01Z",
+  "last_run_at": "2026-11-25T00:30:22Z",
   "reported_events": {
     "21959bb0a97af32d67c62937bae3b93bdc483adf8c8bc4d50f65989d64e73204": "2026-11-20T02:56:20Z",
     "2be8fb63bf83fe92b38f78157da47952c875760b91dc9954506d50fc1e4ed8c3": "2026-11-20T02:56:20Z",
@@ -4109,6 +4285,11 @@
     "11b06fbea4b3836d356904808c77e11316566805f8277559bc7a90bb4c6a36a6": "2026-11-24T05:31:01Z",
     "e965bb6cf7db03c30f6d21b5e661a2283427da08b171f4a0f9dd690eb589094c": "2026-11-24T05:31:01Z",
     "72b12e24481cc26381119ed469151f34647859d322ba84b85d10a31f529a1ec0": "2026-11-24T05:31:01Z",
-    "8a14839be99f4eeb6a6618b88f13d44a1ecdb31486f3e912584445ebb1f6e2fd": "2026-11-24T05:31:01Z"
+    "8a14839be99f4eeb6a6618b88f13d44a1ecdb31486f3e912584445ebb1f6e2fd": "2026-11-24T05:31:01Z",
+    "cd2c6ef38ed255200551e4d5b043f02bc9374b0fdf860b4559dc148045e27725": "2026-11-25T00:30:22Z",
+    "3addd3fc72d20f7c8ec9ec41aea7e44ea181954257fba8b9745068571895fb15": "2026-11-25T00:30:22Z",
+    "22fc7431ebbbd93df50dd01bee3d2d2cb0bb8e46aad83f29c24af6c968aebcac": "2026-11-25T00:30:22Z",
+    "a83cf9d997d802b49fbd693ef29de0621d1a02c86fc13865fcdfbfc764b987d8": "2026-11-25T00:30:22Z",
+    "1d9129cc3a0367a98fed7be6f69c5e9294373fe028e6289277d3572721c24bed": "2026-11-25T00:30:22Z"
   }
 }
