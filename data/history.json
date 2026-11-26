@@ -4124,9 +4124,196 @@
       "updated_at": "2026-11-20T22:38:00Z",
       "date_raw": "Fri, 20 Nov 2026 22:38:00 GMT",
       "first_discovered_at": "2026-11-25T00:30:22Z"
+    },
+    "8255c673526a5b181ac4dc5938b6d49db96d069f7e674712bbbb717da9df4333": {
+      "item_id": "8255c673526a5b181ac4dc5938b6d49db96d069f7e674712bbbb717da9df4333",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "AWS Lambda now supports orchestrating MicroVMs with Lambda durable functions",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/lambda-durable-microvm/",
+      "published_at": "2026-11-25T20:00:00Z",
+      "updated_at": "2026-11-25T20:00:00Z",
+      "date_raw": "Wed, 25 Nov 2026 20:00:00 GMT",
+      "first_discovered_at": "2026-11-26T02:10:41Z"
+    },
+    "68869096e62928c37069489a713380d918e573a001b65d20a7f1cb4f182752f8": {
+      "item_id": "68869096e62928c37069489a713380d918e573a001b65d20a7f1cb4f182752f8",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon CloudWatch Omni now integrates with PagerDuty",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-cloudwatch-omni-pagerduty/",
+      "published_at": "2026-11-25T20:00:00Z",
+      "updated_at": "2026-11-25T20:00:00Z",
+      "date_raw": "Wed, 25 Nov 2026 20:00:00 GMT",
+      "first_discovered_at": "2026-11-26T02:10:41Z"
+    },
+    "99b99100b7ef29cb0a47a0e409a6f0f1cc707948cae930c8a974a68a258305fb": {
+      "item_id": "99b99100b7ef29cb0a47a0e409a6f0f1cc707948cae930c8a974a68a258305fb",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon EC2 M8g instances are now available in Israel (Tel Aviv)",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-ec2-m8g-instances-telaviv-region/",
+      "published_at": "2026-11-25T17:15:00Z",
+      "updated_at": "2026-11-25T17:15:00Z",
+      "date_raw": "Wed, 25 Nov 2026 17:15:00 GMT",
+      "first_discovered_at": "2026-11-26T02:10:41Z"
+    },
+    "c1404af8d0f2646f345ece12bc969968a0eb026801d00b9c5561e81d22052889": {
+      "item_id": "c1404af8d0f2646f345ece12bc969968a0eb026801d00b9c5561e81d22052889",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon EC2 M9gd instances are now available in Asia Pacific (Seoul)",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-ec2-m9gd-asiapacific-seoul/",
+      "published_at": "2026-11-25T17:10:00Z",
+      "updated_at": "2026-11-25T17:10:00Z",
+      "date_raw": "Wed, 25 Nov 2026 17:10:00 GMT",
+      "first_discovered_at": "2026-11-26T02:10:41Z"
+    },
+    "c5068bcc53d0519292e525a2f6487f31b82410d73b06a2fc234c14bfffec0af0": {
+      "item_id": "c5068bcc53d0519292e525a2f6487f31b82410d73b06a2fc234c14bfffec0af0",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon EC2 C9gd instances now available in additional regions",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-ec2-c9gd-instances-additional-regions/",
+      "published_at": "2026-11-25T16:49:00Z",
+      "updated_at": "2026-11-25T16:49:00Z",
+      "date_raw": "Wed, 25 Nov 2026 16:49:00 GMT",
+      "first_discovered_at": "2026-11-26T02:10:41Z"
+    },
+    "e618b2e570131f4a3d69a6f4dddfecfc4ac80785761cfbb4ce3806eeaac03c77": {
+      "item_id": "e618b2e570131f4a3d69a6f4dddfecfc4ac80785761cfbb4ce3806eeaac03c77",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon EC2 C9g instances are now available in additional regions",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-ec2-c9g-instances-additional-regions/",
+      "published_at": "2026-11-25T16:17:00Z",
+      "updated_at": "2026-11-25T16:17:00Z",
+      "date_raw": "Wed, 25 Nov 2026 16:17:00 GMT",
+      "first_discovered_at": "2026-11-26T02:10:41Z"
+    },
+    "476116ac5f2b1a273b0e5926dfb132d9061e919240cb52feb4025665db1b3e76": {
+      "item_id": "476116ac5f2b1a273b0e5926dfb132d9061e919240cb52feb4025665db1b3e76",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon EC2 M9g instances now available in additional regions",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-ec2-m9g-instances-additional-regions/",
+      "published_at": "2026-11-25T16:06:00Z",
+      "updated_at": "2026-11-25T16:06:00Z",
+      "date_raw": "Wed, 25 Nov 2026 16:06:00 GMT",
+      "first_discovered_at": "2026-11-26T02:10:41Z"
+    },
+    "30390fcd8636936357adf0391b311c5193ba7a0b994a264db28f3c4c35982e1c": {
+      "item_id": "30390fcd8636936357adf0391b311c5193ba7a0b994a264db28f3c4c35982e1c",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon Transcribe Turbo: more accurate transcripts and natural turn-taking for voice agents, now in public preview",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/transcribe-turbo-preview/",
+      "published_at": "2026-11-25T08:00:00Z",
+      "updated_at": "2026-11-25T08:00:00Z",
+      "date_raw": "Wed, 25 Nov 2026 08:00:00 GMT",
+      "first_discovered_at": "2026-11-26T02:10:41Z"
+    },
+    "2598227f9ea42bc32b202dfd716a1e1877e5f73f34d8b2637a5d1e690118e37e": {
+      "item_id": "2598227f9ea42bc32b202dfd716a1e1877e5f73f34d8b2637a5d1e690118e37e",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "AWS IoT Core now uses dedicated IPv6 address ranges for the HTTP rule action",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-iot-core-dedicated-ipv6-ranges/",
+      "published_at": "2026-11-25T08:00:00Z",
+      "updated_at": "2026-11-25T08:00:00Z",
+      "date_raw": "Wed, 25 Nov 2026 08:00:00 GMT",
+      "first_discovered_at": "2026-11-26T02:10:41Z"
+    },
+    "5d745e29c9a63c5a9ff647c5b121c5e37ea2a98ec216fd6767cc3ec5b40dfa91": {
+      "item_id": "5d745e29c9a63c5a9ff647c5b121c5e37ea2a98ec216fd6767cc3ec5b40dfa91",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "AWS IoT Core quotas and usage are now visible in AWS Service Quotas console",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-iot-core-quota-usage-monitoring/",
+      "published_at": "2026-11-25T08:00:00Z",
+      "updated_at": "2026-11-25T08:00:00Z",
+      "date_raw": "Wed, 25 Nov 2026 08:00:00 GMT",
+      "first_discovered_at": "2026-11-26T02:10:41Z"
+    },
+    "ef71ddb76bef23a7fa429476836af390e3cf586bf67a9058d7edbeccd9cd9654": {
+      "item_id": "ef71ddb76bef23a7fa429476836af390e3cf586bf67a9058d7edbeccd9cd9654",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "AWS Device Farm now supports Android emulators and iOS simulators",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/device-farm-virtual-devices/",
+      "published_at": "2026-11-25T08:00:00Z",
+      "updated_at": "2026-11-25T08:00:00Z",
+      "date_raw": "Wed, 25 Nov 2026 08:00:00 GMT",
+      "first_discovered_at": "2026-11-26T02:10:41Z"
+    },
+    "18067208ad1e0cbdfd340632eff38bdbe32ca9410ed429974f6c42b9285dc5e6": {
+      "item_id": "18067208ad1e0cbdfd340632eff38bdbe32ca9410ed429974f6c42b9285dc5e6",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "AWS IAM extends trusted identity propagation to IAM federation and IAM Roles Anywhere, and simplifies it in IAM Identity Center",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-iam/",
+      "published_at": "2026-11-25T06:00:00Z",
+      "updated_at": "2026-11-25T06:00:00Z",
+      "date_raw": "Wed, 25 Nov 2026 06:00:00 GMT",
+      "first_discovered_at": "2026-11-26T02:10:41Z"
+    },
+    "3110504157a37ff087de18d5828865896f96f7a83ad096be4aeec339bcf49376": {
+      "item_id": "3110504157a37ff087de18d5828865896f96f7a83ad096be4aeec339bcf49376",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon SageMaker HyperPod extends AMI auto-patching to Slurm and inference on EKS",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-sagemaker-hyperpod-patching-slurm-eks-inference/",
+      "published_at": "2026-11-23T17:00:00Z",
+      "updated_at": "2026-11-23T17:00:00Z",
+      "date_raw": "Mon, 23 Nov 2026 17:00:00 GMT",
+      "first_discovered_at": "2026-11-26T02:10:41Z"
+    },
+    "268cd880263848ce7d4d0c5e04e89c342194bad554e223bfa30e2b7b563848ca": {
+      "item_id": "268cd880263848ce7d4d0c5e04e89c342194bad554e223bfa30e2b7b563848ca",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon SageMaker HyperPod now detects and recovers hung training jobs on Slurm clusters",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-sagemaker-hyperpod-slurm-hung-jobs/",
+      "published_at": "2026-11-23T17:00:00Z",
+      "updated_at": "2026-11-23T17:00:00Z",
+      "date_raw": "Mon, 23 Nov 2026 17:00:00 GMT",
+      "first_discovered_at": "2026-11-26T02:10:41Z"
+    },
+    "eed519c64c01abdc6c38bee5641cb42c9f41292660b21a62d6cc4e6e3cbb718c": {
+      "item_id": "eed519c64c01abdc6c38bee5641cb42c9f41292660b21a62d6cc4e6e3cbb718c",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon SageMaker HyperPod now detects Kubernetes issues affecting training",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-sagemaker-hyperpod-k8s-monitoring-agent/",
+      "published_at": "2026-11-23T17:00:00Z",
+      "updated_at": "2026-11-23T17:00:00Z",
+      "date_raw": "Mon, 23 Nov 2026 17:00:00 GMT",
+      "first_discovered_at": "2026-11-26T02:10:41Z"
+    },
+    "83bd31fde12ecd16b65a0f5cb230edfa42d3af8043b46c3a43f71cd80420669a": {
+      "item_id": "83bd31fde12ecd16b65a0f5cb230edfa42d3af8043b46c3a43f71cd80420669a",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon SageMaker HyperPod deep health check now validates training correctness",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-sagemaker-hyperpod-training-validation/",
+      "published_at": "2026-11-23T17:00:00Z",
+      "updated_at": "2026-11-23T17:00:00Z",
+      "date_raw": "Mon, 23 Nov 2026 17:00:00 GMT",
+      "first_discovered_at": "2026-11-26T02:10:41Z"
+    },
+    "d9894a7f65202968bc3ea591a7dba137f1d131ee5d051a14dfe2b68d10843a4c": {
+      "item_id": "d9894a7f65202968bc3ea591a7dba137f1d131ee5d051a14dfe2b68d10843a4c",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon SageMaker HyperPod now supports NCCL profiling for training jobs",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-sagemaker-hyperpod-nccl-profiler/",
+      "published_at": "2026-11-23T17:00:00Z",
+      "updated_at": "2026-11-23T17:00:00Z",
+      "date_raw": "Mon, 23 Nov 2026 17:00:00 GMT",
+      "first_discovered_at": "2026-11-26T02:10:41Z"
     }
   },
-  "last_run_at": "2026-11-25T00:30:22Z",
+  "last_run_at": "2026-11-26T02:10:41Z",
   "reported_events": {
     "21959bb0a97af32d67c62937bae3b93bdc483adf8c8bc4d50f65989d64e73204": "2026-11-20T02:56:20Z",
     "2be8fb63bf83fe92b38f78157da47952c875760b91dc9954506d50fc1e4ed8c3": "2026-11-20T02:56:20Z",
@@ -4290,6 +4477,18 @@
     "3addd3fc72d20f7c8ec9ec41aea7e44ea181954257fba8b9745068571895fb15": "2026-11-25T00:30:22Z",
     "22fc7431ebbbd93df50dd01bee3d2d2cb0bb8e46aad83f29c24af6c968aebcac": "2026-11-25T00:30:22Z",
     "a83cf9d997d802b49fbd693ef29de0621d1a02c86fc13865fcdfbfc764b987d8": "2026-11-25T00:30:22Z",
-    "1d9129cc3a0367a98fed7be6f69c5e9294373fe028e6289277d3572721c24bed": "2026-11-25T00:30:22Z"
+    "1d9129cc3a0367a98fed7be6f69c5e9294373fe028e6289277d3572721c24bed": "2026-11-25T00:30:22Z",
+    "23f2d5f856817dd993a07be0c7be897973ad50041df52a2f1eb0980d20b37cac": "2026-11-26T02:10:41Z",
+    "198f0502001817b455a1f6a24dca8025f35123c246b02bbd4e9a3829bfed1284": "2026-11-26T02:10:41Z",
+    "9afbc665ee6d553fc96f713758d287fc4bfdb3f8a498ff19971a3593a02734c9": "2026-11-26T02:10:41Z",
+    "7495d769eab5c5aeaf2514b85c99d09d30a93ad6dc6d81c738e0396bc8da4d15": "2026-11-26T02:10:41Z",
+    "2503f1aec4472725237a07a936e923501a155f6bdd43379879f522b81b74fec2": "2026-11-26T02:10:41Z",
+    "c6d11fee19de782d8e20233de1eb6315319cdf60b9325e9d03a9643f02d02969": "2026-11-26T02:10:41Z",
+    "77a1f728c9d0bc23b40eb1dc7b1c2ab35b805682238f05f86b188fb4555f78e7": "2026-11-26T02:10:41Z",
+    "f9b7dce1fd3a85271ea676b558939fc43581fcbcbc7a039a6dbb9036a71e30d4": "2026-11-26T02:10:41Z",
+    "b15b43ffb0f514207124c41df794b43b22d73b269d566013921e61e8d38e10a9": "2026-11-26T02:10:41Z",
+    "75c40842842359db8ef4f78b2444fa9b8c776f1c9d0e9e8a01775d680b8c7f0f": "2026-11-26T02:10:41Z",
+    "b200bd204e0a74d870f59e07e388f74cb8eb8035b510b8316bf10efa225b0b9e": "2026-11-26T02:10:41Z",
+    "96df91a99ad44e3979734f50269d439b4ba7c1a87be5dac279cff128a9bcc5c7": "2026-11-26T02:10:41Z"
   }
 }
