@@ -4311,9 +4311,42 @@
       "updated_at": "2026-11-23T17:00:00Z",
       "date_raw": "Mon, 23 Nov 2026 17:00:00 GMT",
       "first_discovered_at": "2026-11-26T02:10:41Z"
+    },
+    "8a0cb93b1c8e09a85418dc07c482b6ee98b523405892c2d5317f72ce552accc8": {
+      "item_id": "8a0cb93b1c8e09a85418dc07c482b6ee98b523405892c2d5317f72ce552accc8",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon RDS for PostgreSQL supports minor versions 18.7, 17.12, 16.16, 15.20, and 14.25",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-rds-postgresql-18-7-17-12-16-16-15-20-14-25/",
+      "published_at": "2026-11-26T17:00:00Z",
+      "updated_at": "2026-11-26T17:00:00Z",
+      "date_raw": "Thu, 26 Nov 2026 17:00:00 GMT",
+      "first_discovered_at": "2026-11-27T02:09:10Z"
+    },
+    "3b12131c8c941fb69bb00f29380fe6ba39f3bf708053b5fb8ab6bd48af459d6b": {
+      "item_id": "3b12131c8c941fb69bb00f29380fe6ba39f3bf708053b5fb8ab6bd48af459d6b",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Elastic Load Balancing for Envoy is now generally available",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/elastic-load-balancing-for-envoy-generally-available",
+      "published_at": "2026-11-25T16:00:00Z",
+      "updated_at": "2026-11-25T16:00:00Z",
+      "date_raw": "Wed, 25 Nov 2026 16:00:00 GMT",
+      "first_discovered_at": "2026-11-27T02:09:10Z"
+    },
+    "4057d94e0311ef060bc7dd338298ff87bce99b7eec9601c4bcce6717e0af0e9a": {
+      "item_id": "4057d94e0311ef060bc7dd338298ff87bce99b7eec9601c4bcce6717e0af0e9a",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon OpenSearch Service new engine now joins logs, traces, and metadata",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-opensearch-service-distributed-joins",
+      "published_at": "2026-11-24T17:00:00Z",
+      "updated_at": "2026-11-24T17:00:00Z",
+      "date_raw": "Tue, 24 Nov 2026 17:00:00 GMT",
+      "first_discovered_at": "2026-11-27T02:09:10Z"
     }
   },
-  "last_run_at": "2026-11-26T02:10:41Z",
+  "last_run_at": "2026-11-27T02:09:10Z",
   "reported_events": {
     "21959bb0a97af32d67c62937bae3b93bdc483adf8c8bc4d50f65989d64e73204": "2026-11-20T02:56:20Z",
     "2be8fb63bf83fe92b38f78157da47952c875760b91dc9954506d50fc1e4ed8c3": "2026-11-20T02:56:20Z",
@@ -4489,6 +4522,7 @@
     "b15b43ffb0f514207124c41df794b43b22d73b269d566013921e61e8d38e10a9": "2026-11-26T02:10:41Z",
     "75c40842842359db8ef4f78b2444fa9b8c776f1c9d0e9e8a01775d680b8c7f0f": "2026-11-26T02:10:41Z",
     "b200bd204e0a74d870f59e07e388f74cb8eb8035b510b8316bf10efa225b0b9e": "2026-11-26T02:10:41Z",
-    "96df91a99ad44e3979734f50269d439b4ba7c1a87be5dac279cff128a9bcc5c7": "2026-11-26T02:10:41Z"
+    "96df91a99ad44e3979734f50269d439b4ba7c1a87be5dac279cff128a9bcc5c7": "2026-11-26T02:10:41Z",
+    "33ecf075827ced83e4f54f872e2a75979d820d7b5cf8b4c7285e7fc54d468914": "2026-11-27T02:09:10Z"
   }
 }
