@@ -1,8 +1,8 @@
 {
-  "run_at": "2026-11-27T02:09:10Z",
+  "run_at": "2026-11-28T01:56:16Z",
   "sources": [
     {
-      "run_at": "2026-11-27T02:09:10Z",
+      "run_at": "2026-11-28T01:56:16Z",
       "source_id": "aws_whats_new",
       "vendor": "AWS",
       "source_url": "https://aws.amazon.com/new/feed/",
@@ -12,12 +12,12 @@
       "final_url": "https://aws.amazon.com/about-aws/whats-new/recent/feed/",
       "content_type": "application/rss+xml",
       "items_parsed": 100,
-      "new_items": 3,
-      "recent_new_items": 1,
+      "new_items": 5,
+      "recent_new_items": 3,
       "error": null
     },
     {
-      "run_at": "2026-11-27T02:09:10Z",
+      "run_at": "2026-11-28T01:56:16Z",
       "source_id": "azure_updates",
       "vendor": "Azure",
       "source_url": "https://azure.microsoft.com/en-us/updates/",
@@ -32,7 +32,7 @@
       "error": null
     },
     {
-      "run_at": "2026-11-27T02:09:10Z",
+      "run_at": "2026-11-28T01:56:16Z",
       "source_id": "meta_marketing_api",
       "vendor": "Meta Marketing API",
       "source_url": "https://developers.facebook.com/docs/graph-api/changelog/versions/?locale=en_US",
@@ -47,7 +47,7 @@
       "error": null
     },
     {
-      "run_at": "2026-11-27T02:09:10Z",
+      "run_at": "2026-11-28T01:56:16Z",
       "source_id": "salesforce_release_notes",
       "vendor": "Salesforce",
       "source_url": "https://help.salesforce.com/s/articleView?id=release-notes.rn_change_log.htm&language=en_US&type=5",
@@ -62,7 +62,7 @@
       "error": null
     },
     {
-      "run_at": "2026-11-27T02:09:10Z",
+      "run_at": "2026-11-28T01:56:16Z",
       "source_id": "hubspot_product_blog",
       "vendor": "HubSpot",
       "source_url": "https://product.hubspot.com/blog/rss.xml",
@@ -77,7 +77,7 @@
       "error": null
     },
     {
-      "run_at": "2026-11-27T02:09:10Z",
+      "run_at": "2026-11-28T01:56:16Z",
       "source_id": "adobe_experience_cloud",
       "vendor": "Adobe Experience Cloud",
       "source_url": "https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current",
@@ -92,7 +92,7 @@
       "error": null
     },
     {
-      "run_at": "2026-11-27T02:09:10Z",
+      "run_at": "2026-11-28T01:56:16Z",
       "source_id": "braze_releases",
       "vendor": "Braze",
       "source_url": "https://www.braze.com/docs/releases",
@@ -107,7 +107,7 @@
       "error": null
     },
     {
-      "run_at": "2026-11-27T02:09:10Z",
+      "run_at": "2026-11-28T01:56:16Z",
       "source_id": "dotdigital_personalization",
       "vendor": "Dotdigital",
       "source_url": "https://personalization.help.dotdigital.com/en/articles/18226397-4-november-2026-personalization-release-notes",
@@ -124,52 +124,100 @@
   ],
   "new_items": [
     {
-      "item_id": "8a0cb93b1c8e09a85418dc07c482b6ee98b523405892c2d5317f72ce552accc8",
+      "item_id": "1dbe9866cf13a510567cfdfa2693e5526ed67b066c9eebf73d4ba8d6ea802289",
       "source_id": "aws_whats_new",
       "vendor": "AWS",
-      "title": "Amazon RDS for PostgreSQL supports minor versions 18.7, 17.12, 16.16, 15.20, and 14.25",
-      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-rds-postgresql-18-7-17-12-16-16-15-20-14-25/",
-      "published_at": "2026-11-26T17:00:00Z",
-      "updated_at": "2026-11-26T17:00:00Z",
-      "date_raw": "Thu, 26 Nov 2026 17:00:00 GMT",
-      "first_discovered_at": "2026-11-27T02:09:10Z"
+      "title": "Amazon Timestream for InfluxDB 3 now supports heterogeneous clusters",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/influxdb-heterogeneous-cluster/",
+      "published_at": "2026-11-27T22:30:00Z",
+      "updated_at": "2026-11-27T22:30:00Z",
+      "date_raw": "Fri, 27 Nov 2026 22:30:00 GMT",
+      "first_discovered_at": "2026-11-28T01:56:16Z"
     },
     {
-      "item_id": "3b12131c8c941fb69bb00f29380fe6ba39f3bf708053b5fb8ab6bd48af459d6b",
+      "item_id": "e7f1da0a0db9c4333b9430282da2b910b699e4d108d2a02a0aa95e324f3c1aaa",
       "source_id": "aws_whats_new",
       "vendor": "AWS",
-      "title": "Elastic Load Balancing for Envoy is now generally available",
-      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/elastic-load-balancing-for-envoy-generally-available",
-      "published_at": "2026-11-25T16:00:00Z",
-      "updated_at": "2026-11-25T16:00:00Z",
-      "date_raw": "Wed, 25 Nov 2026 16:00:00 GMT",
-      "first_discovered_at": "2026-11-27T02:09:10Z"
+      "title": "Amazon CloudWatch announces basic OpenTelemetry enrichment at no additional cost",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-cloudwatch-opentelemetry-enrichment/",
+      "published_at": "2026-11-27T21:03:00Z",
+      "updated_at": "2026-11-27T21:03:00Z",
+      "date_raw": "Fri, 27 Nov 2026 21:03:00 GMT",
+      "first_discovered_at": "2026-11-28T01:56:16Z"
     },
     {
-      "item_id": "4057d94e0311ef060bc7dd338298ff87bce99b7eec9601c4bcce6717e0af0e9a",
+      "item_id": "f83afe5d0804a635eb8c4b6398fe6ac2e91fcb1e4d6e83be9be1656255622395",
       "source_id": "aws_whats_new",
       "vendor": "AWS",
-      "title": "Amazon OpenSearch Service new engine now joins logs, traces, and metadata",
+      "title": "Amazon Neptune introduces Neptune Graph Sessions, smaller graphs designed for agents that scale to zero and resume automatically",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-neptune-graph-sessions-generally-available",
+      "published_at": "2026-11-27T19:00:00Z",
+      "updated_at": "2026-11-27T19:00:00Z",
+      "date_raw": "Fri, 27 Nov 2026 19:00:00 GMT",
+      "first_discovered_at": "2026-11-28T01:56:16Z"
+    },
+    {
+      "item_id": "e757e9e8add167b4ac7d5ea44ca06ab51adefbde1505af2975c17c2e76e8cc50",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon OpenSearch Service optimised engine now publishes data to Amazon S3 Tables",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-opensearch-service-publish-s3-tables",
+      "published_at": "2026-11-25T17:00:00Z",
+      "updated_at": "2026-11-25T17:00:00Z",
+      "date_raw": "Wed, 25 Nov 2026 17:00:00 GMT",
+      "first_discovered_at": "2026-11-28T01:56:16Z"
+    },
+    {
+      "item_id": "42dc61c0d2edd28b9520e3efea1f2255a8810c19fe3b0652f260399097cb9dfb",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon OpenSearch Service optimized engine supports high-cardinality query and DSL",
       "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-opensearch-service-distributed-joins",
       "published_at": "2026-11-24T17:00:00Z",
       "updated_at": "2026-11-24T17:00:00Z",
       "date_raw": "Tue, 24 Nov 2026 17:00:00 GMT",
-      "first_discovered_at": "2026-11-27T02:09:10Z"
+      "first_discovered_at": "2026-11-28T01:56:16Z"
     }
   ],
   "recent_new_items": [
     {
-      "item_id": "8a0cb93b1c8e09a85418dc07c482b6ee98b523405892c2d5317f72ce552accc8",
+      "item_id": "1dbe9866cf13a510567cfdfa2693e5526ed67b066c9eebf73d4ba8d6ea802289",
       "source_id": "aws_whats_new",
       "vendor": "AWS",
-      "title": "Amazon RDS for PostgreSQL supports minor versions 18.7, 17.12, 16.16, 15.20, and 14.25",
-      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-rds-postgresql-18-7-17-12-16-16-15-20-14-25/",
-      "published_at": "2026-11-26T17:00:00Z",
-      "updated_at": "2026-11-26T17:00:00Z",
-      "date_raw": "Thu, 26 Nov 2026 17:00:00 GMT",
-      "first_discovered_at": "2026-11-27T02:09:10Z",
+      "title": "Amazon Timestream for InfluxDB 3 now supports heterogeneous clusters",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/influxdb-heterogeneous-cluster/",
+      "published_at": "2026-11-27T22:30:00Z",
+      "updated_at": "2026-11-27T22:30:00Z",
+      "date_raw": "Fri, 27 Nov 2026 22:30:00 GMT",
+      "first_discovered_at": "2026-11-28T01:56:16Z",
       "event_type": "published",
-      "event_at": "2026-11-26T17:00:00Z"
+      "event_at": "2026-11-27T22:30:00Z"
+    },
+    {
+      "item_id": "e7f1da0a0db9c4333b9430282da2b910b699e4d108d2a02a0aa95e324f3c1aaa",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon CloudWatch announces basic OpenTelemetry enrichment at no additional cost",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-cloudwatch-opentelemetry-enrichment/",
+      "published_at": "2026-11-27T21:03:00Z",
+      "updated_at": "2026-11-27T21:03:00Z",
+      "date_raw": "Fri, 27 Nov 2026 21:03:00 GMT",
+      "first_discovered_at": "2026-11-28T01:56:16Z",
+      "event_type": "published",
+      "event_at": "2026-11-27T21:03:00Z"
+    },
+    {
+      "item_id": "f83afe5d0804a635eb8c4b6398fe6ac2e91fcb1e4d6e83be9be1656255622395",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon Neptune introduces Neptune Graph Sessions, smaller graphs designed for agents that scale to zero and resume automatically",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-neptune-graph-sessions-generally-available",
+      "published_at": "2026-11-27T19:00:00Z",
+      "updated_at": "2026-11-27T19:00:00Z",
+      "date_raw": "Fri, 27 Nov 2026 19:00:00 GMT",
+      "first_discovered_at": "2026-11-28T01:56:16Z",
+      "event_type": "published",
+      "event_at": "2026-11-27T19:00:00Z"
     }
   ],
   "recent_window_hours": 24

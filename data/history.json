@@ -4344,9 +4344,64 @@
       "updated_at": "2026-11-24T17:00:00Z",
       "date_raw": "Tue, 24 Nov 2026 17:00:00 GMT",
       "first_discovered_at": "2026-11-27T02:09:10Z"
+    },
+    "1dbe9866cf13a510567cfdfa2693e5526ed67b066c9eebf73d4ba8d6ea802289": {
+      "item_id": "1dbe9866cf13a510567cfdfa2693e5526ed67b066c9eebf73d4ba8d6ea802289",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon Timestream for InfluxDB 3 now supports heterogeneous clusters",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/influxdb-heterogeneous-cluster/",
+      "published_at": "2026-11-27T22:30:00Z",
+      "updated_at": "2026-11-27T22:30:00Z",
+      "date_raw": "Fri, 27 Nov 2026 22:30:00 GMT",
+      "first_discovered_at": "2026-11-28T01:56:16Z"
+    },
+    "e7f1da0a0db9c4333b9430282da2b910b699e4d108d2a02a0aa95e324f3c1aaa": {
+      "item_id": "e7f1da0a0db9c4333b9430282da2b910b699e4d108d2a02a0aa95e324f3c1aaa",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon CloudWatch announces basic OpenTelemetry enrichment at no additional cost",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-cloudwatch-opentelemetry-enrichment/",
+      "published_at": "2026-11-27T21:03:00Z",
+      "updated_at": "2026-11-27T21:03:00Z",
+      "date_raw": "Fri, 27 Nov 2026 21:03:00 GMT",
+      "first_discovered_at": "2026-11-28T01:56:16Z"
+    },
+    "f83afe5d0804a635eb8c4b6398fe6ac2e91fcb1e4d6e83be9be1656255622395": {
+      "item_id": "f83afe5d0804a635eb8c4b6398fe6ac2e91fcb1e4d6e83be9be1656255622395",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon Neptune introduces Neptune Graph Sessions, smaller graphs designed for agents that scale to zero and resume automatically",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-neptune-graph-sessions-generally-available",
+      "published_at": "2026-11-27T19:00:00Z",
+      "updated_at": "2026-11-27T19:00:00Z",
+      "date_raw": "Fri, 27 Nov 2026 19:00:00 GMT",
+      "first_discovered_at": "2026-11-28T01:56:16Z"
+    },
+    "e757e9e8add167b4ac7d5ea44ca06ab51adefbde1505af2975c17c2e76e8cc50": {
+      "item_id": "e757e9e8add167b4ac7d5ea44ca06ab51adefbde1505af2975c17c2e76e8cc50",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon OpenSearch Service optimised engine now publishes data to Amazon S3 Tables",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-opensearch-service-publish-s3-tables",
+      "published_at": "2026-11-25T17:00:00Z",
+      "updated_at": "2026-11-25T17:00:00Z",
+      "date_raw": "Wed, 25 Nov 2026 17:00:00 GMT",
+      "first_discovered_at": "2026-11-28T01:56:16Z"
+    },
+    "42dc61c0d2edd28b9520e3efea1f2255a8810c19fe3b0652f260399097cb9dfb": {
+      "item_id": "42dc61c0d2edd28b9520e3efea1f2255a8810c19fe3b0652f260399097cb9dfb",
+      "source_id": "aws_whats_new",
+      "vendor": "AWS",
+      "title": "Amazon OpenSearch Service optimized engine supports high-cardinality query and DSL",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-opensearch-service-distributed-joins",
+      "published_at": "2026-11-24T17:00:00Z",
+      "updated_at": "2026-11-24T17:00:00Z",
+      "date_raw": "Tue, 24 Nov 2026 17:00:00 GMT",
+      "first_discovered_at": "2026-11-28T01:56:16Z"
     }
   },
-  "last_run_at": "2026-11-27T02:09:10Z",
+  "last_run_at": "2026-11-28T01:56:16Z",
   "reported_events": {
     "21959bb0a97af32d67c62937bae3b93bdc483adf8c8bc4d50f65989d64e73204": "2026-11-20T02:56:20Z",
     "2be8fb63bf83fe92b38f78157da47952c875760b91dc9954506d50fc1e4ed8c3": "2026-11-20T02:56:20Z",
@@ -4523,6 +4578,9 @@
     "75c40842842359db8ef4f78b2444fa9b8c776f1c9d0e9e8a01775d680b8c7f0f": "2026-11-26T02:10:41Z",
     "b200bd204e0a74d870f59e07e388f74cb8eb8035b510b8316bf10efa225b0b9e": "2026-11-26T02:10:41Z",
     "96df91a99ad44e3979734f50269d439b4ba7c1a87be5dac279cff128a9bcc5c7": "2026-11-26T02:10:41Z",
-    "33ecf075827ced83e4f54f872e2a75979d820d7b5cf8b4c7285e7fc54d468914": "2026-11-27T02:09:10Z"
+    "33ecf075827ced83e4f54f872e2a75979d820d7b5cf8b4c7285e7fc54d468914": "2026-11-27T02:09:10Z",
+    "1f0af486629c066daa2d1346c25fb05a517c8738a44e9992e348a0bf252fbc4d": "2026-11-28T01:56:16Z",
+    "9e873b021bd1ad405f475c2574c12189dc1ca099e524168601e8231b191e3b7d": "2026-11-28T01:56:16Z",
+    "1073ce6e6ed2b92f3d327a767b584b868d6f28403b0d13a3ccd26c6a46a18f68": "2026-11-28T01:56:16Z"
   }
 }
